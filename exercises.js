@@ -153,7 +153,13 @@ var createZeroFilledArray = function(num) {
  * @param {Array}
  * @return {Array}
  */
-var poppedArray;
+
+
+var poppedArray = function(arr) {
+  arr.pop();
+
+  return arr;
+};
 
 /* #splitString
  *
@@ -162,7 +168,10 @@ var poppedArray;
  * @param {String}
  * @return {Array}
  */
-var splitString;
+var splitString = function(str) {
+  var result = str.split('');
+  return result;
+}
 
 /* #lengthOfLast
  *
@@ -171,7 +180,10 @@ var splitString;
  * @param {String}
  * @return {Number}
  */
-var lengthOfLast;
+var lengthOfLast = function(arr) {
+  return arr[arr.length - 1].length;
+
+}
 
 /* #sumBelowTen
  *
@@ -180,7 +192,20 @@ var lengthOfLast;
  * @param {Array}
  * @return {Number}
  */
-var sumBelowTen;
+
+var sumBelowTen = function(arr) {
+  var results = 0;
+
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] < 10) {
+      results += arr[i];
+    }
+  }
+
+  return results;
+}
+
+
 
 /* #moreThanTenLetters
  *
@@ -189,7 +214,16 @@ var sumBelowTen;
  * @param {String}
  * @return {Number}
  */
-var moreThanTenLetters;
+var moreThanTenLetters = function(arr) {
+  var result = 0;
+  for(var i = 0; i < arr.length; i++) {
+    if(arr[i].length > 10){
+    result ++;
+    } 
+  }
+  return result;
+}
+
 
 /* #multiplyAll
  *
@@ -198,7 +232,15 @@ var moreThanTenLetters;
  * @param {Array}
  * @return {Number}
  */
-var multiplyAll;
+var multiplyAll = function(arr) {
+  var result = 1;
+
+  for (var i = 0; i < arr.length; i++) {
+    result *= arr[i];
+  }
+
+  return result;
+}
 
 /* #getKeys
  *
@@ -207,7 +249,13 @@ var multiplyAll;
  * @param {Object}
  * @return {Array}
  */
-var getKeys;
+
+
+
+
+var getKeys = function(obj) {
+  return Object.keys(obj);
+};
 
 /* #sumAllPositive
  *
@@ -216,7 +264,15 @@ var getKeys;
  * @param {String}
  * @return {Number}
  */
-var sumAllPositive;
+var sumAllPositive = function(arr) {
+  var result = 0
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] > 0) {
+      result += arr[i]
+    }
+  }
+  return result;
+}
 
 /* #stringCountBelowThree
  *
@@ -225,7 +281,18 @@ var sumAllPositive;
  * @param {Array}
  * @return {Number}
  */
-var stringCountBelowThree;
+var stringCountBelowThree = function(arr) {
+  var result = 0
+  
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i].length <= 3) {
+      result += 1
+    }
+  }
+  return result;
+
+}
+
 
 /* #countObjects
  *
@@ -234,7 +301,15 @@ var stringCountBelowThree;
  * @param {Array}
  * @return {Number}
  */
-var countObjects;
+var countObjects = function(arr) {
+  result = 0;
+  for(var i = 0; i < arr.length; i++) {
+    if(typeof arr[i] === 'object'){
+      result += 1;
+    }
+  }
+  return result;
+}
 
 /* #getObjectKeys
  *
@@ -440,16 +515,16 @@ module.exports = {
   convertToArray: convertToArray,
   objectSize: objectSize,
   createZeroFilledArray: createZeroFilledArray,
-  poppedArray: null,
-  splitString: null,
-  lengthOfLast: null,
-  sumBelowTen: null,
-  moreThanTenLetters: null,
-  multiplyAll: null,
-  getKeys: null,
-  sumAllPositive: null,
-  stringCountBelowThree: null,
-  countObjects: null,
+  poppedArray: poppedArray,
+  splitString: splitString,
+  lengthOfLast: lengthOfLast,
+  sumBelowTen: sumBelowTen,
+  moreThanTenLetters: moreThanTenLetters,
+  multiplyAll: multiplyAll,
+  getKeys: getKeys,
+  sumAllPositive: sumAllPositive,
+  stringCountBelowThree: stringCountBelowThree,
+  countObjects: countObjects,
   getObjectKeys: null,
   getObjectValues: null,
   makeObject: null,
@@ -458,7 +533,7 @@ module.exports = {
   tupleToObjectReverse: null,
   strToKeys: null,
   getValues: null,
-  getKeys: null,
+  
   objectToArray: null,
   arrayToObject: null,
   arraysToObject: null,
