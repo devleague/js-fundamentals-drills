@@ -379,7 +379,7 @@ var tupleConvertToObject;
 
 
 module.exports = {
-  doubleArray: null,
+  doubleArray: doubleArray,
   sumArrays: null, 
   stringCount: null,
   arrayLength: null,
