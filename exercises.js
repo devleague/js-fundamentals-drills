@@ -142,7 +142,10 @@ var createZeroFilledArray = function(n) {
  * @param {Array}
  * @return {Array}
  */
-var poppedArray;
+var poppedArray = function(arr) {
+  arr.pop();
+  return arr;
+}
 
 /* #splitString
  *
@@ -151,7 +154,9 @@ var poppedArray;
  * @param {String}
  * @return {Array}
  */
-var splitString;
+var splitString = function(str) {
+  return str.split("");
+};
 
 /* #lengthOfLast
  *
@@ -160,7 +165,10 @@ var splitString;
  * @param {String}
  * @return {Number}
  */
-var lengthOfLast;
+var lengthOfLast = function(arr) {
+  var last = arr.pop()
+  return last.length;
+};
 
 /* #sumBelowTen
  *
@@ -169,7 +177,15 @@ var lengthOfLast;
  * @param {Array}
  * @return {Number}
  */
-var sumBelowTen;
+var sumBelowTen = function(arr) {
+  var sum = 0;
+  for (var i = 0; i < arr.length; i ++) {
+    if (arr[i] <= 10) {
+      sum += arr[i];
+    }
+  }
+  return sum;
+};
 
 /* #moreThanTenLetters
  *
@@ -178,7 +194,15 @@ var sumBelowTen;
  * @param {String}
  * @return {Number}
  */
-var moreThanTenLetters;
+var moreThanTenLetters = function(arr) {
+  var count = 0;
+  for(var i = 0; i < arr.length; i ++) {
+    if (arr[i].length >= 10) {
+      count++
+    }
+  }
+  return count;
+};
 
 /* #multiplyAll
  *
@@ -187,7 +211,12 @@ var moreThanTenLetters;
  * @param {Array}
  * @return {Number}
  */
-var multiplyAll;
+var multiplyAll = function(arr) {
+  var product = 1;
+  for (var i = 0; i < arr.length; i ++)
+    product *= arr[i];
+  return product;
+};
 
 /* #getKeys
  *
@@ -196,7 +225,9 @@ var multiplyAll;
  * @param {Object}
  * @return {Array}
  */
-var getKeys;
+var getKeys = function(obj) {
+  return Object.keys(obj);
+};
 
 /* #sumAllPositive
  *
@@ -429,13 +460,13 @@ module.exports = {
   convertToArray: convertToArray,
   objectSize: objectSize,
   createZeroFilledArray: createZeroFilledArray,
-  poppedArray: null,
-  splitString: null,
-  lengthOfLast: null,
-  sumBelowTen: null,
-  moreThanTenLetters: null,
-  multiplyAll: null,
-  getKeys: null,
+  poppedArray: poppedArray,
+  splitString: splitString,
+  lengthOfLast: lengthOfLast,
+  sumBelowTen: sumBelowTen,
+  moreThanTenLetters: moreThanTenLetters,
+  multiplyAll: multiplyAll,
+  getKeys: getKeys,
   sumAllPositive: null,
   stringCountBelowThree: null,
   countObjects: null,
