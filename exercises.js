@@ -147,7 +147,11 @@ var createZeroFilledArray = function (number) {
  * @param {Array}
  * @return {Array}
  */
-var poppedArray;
+var poppedArray = function (arr) {
+  arr.pop();
+  return arr;
+  };
+
 
 /* #splitString
  *
@@ -156,7 +160,9 @@ var poppedArray;
  * @param {String}
  * @return {Array}
  */
-var splitString;
+var splitString = function (string) {
+  return string.split("");
+};
 
 /* #lengthOfLast
  *
@@ -165,7 +171,10 @@ var splitString;
  * @param {String}
  * @return {Number}
  */
-var lengthOfLast;
+var lengthOfLast = function(arr){
+  var i = arr.length - 1;
+  return arr[i].length;
+};
 
 /* #sumBelowTen
  *
@@ -174,7 +183,15 @@ var lengthOfLast;
  * @param {Array}
  * @return {Number}
  */
-var sumBelowTen;
+var sumBelowTen = function (arr) {
+  var sum = 0;
+  for (var i = 0; i < arr.length; i++) {
+    if(arr[i] < 10){
+      sum += arr[i];
+    }
+  }
+  return sum;
+};
 
 /* #moreThanTenLetters
  *
@@ -183,7 +200,14 @@ var sumBelowTen;
  * @param {String}
  * @return {Number}
  */
-var moreThanTenLetters;
+var moreThanTenLetters = function(string){
+  var result = 0;
+  for (var i = 0; i < string.length; i++) {
+    if(string[i].length >= 10)
+      result += 1;
+  }
+  return result;
+};
 
 /* #multiplyAll
  *
@@ -192,7 +216,13 @@ var moreThanTenLetters;
  * @param {Array}
  * @return {Number}
  */
-var multiplyAll;
+var multiplyAll = function (arr) {
+  var result = 1;
+  for (var i = 0; i < arr.length; i++) {
+    result *= arr[i];
+  }
+  return result;
+};
 
 /* #getKeys
  *
@@ -201,7 +231,9 @@ var multiplyAll;
  * @param {Object}
  * @return {Array}
  */
-var getKeys;
+var getKeys = function (object) {
+  return Object.keys(object);
+};
 
 /* #sumAllPositive
  *
@@ -210,7 +242,14 @@ var getKeys;
  * @param {String}
  * @return {Number}
  */
-var sumAllPositive;
+var sumAllPositive = function (string) {
+  var sum = 0;
+  for (var i = 0; i < string.length; i++) {
+    if(string[i] >= 0)
+      sum += string[i];  
+  }
+return sum;
+};
 
 /* #stringCountBelowThree
  *
@@ -219,7 +258,16 @@ var sumAllPositive;
  * @param {Array}
  * @return {Number}
  */
-var stringCountBelowThree;
+var stringCountBelowThree = function (arr) {
+  var sum = 0;
+  for (var i = 0; i < arr.length; i++) {
+    if(arr[i].length <= 3){
+      sum += 1;
+
+    }
+  }
+  return sum;
+};
 
 /* #countObjects
  *
@@ -228,7 +276,10 @@ var stringCountBelowThree;
  * @param {Array}
  * @return {Number}
  */
-var countObjects;
+var countObjects = function (arr) {
+  var sum = arr.length;
+  return sum;
+};
 
 /* #getObjectKeys
  *
