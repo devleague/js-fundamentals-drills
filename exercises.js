@@ -213,8 +213,8 @@ var moreThanTenLetters = function(arr) {
  */
 var multiplyAll = function(arr) {
   var product = 1;
-  for (var i = 0; i < arr.length; i ++)
-    product *= arr[i];
+    for (var i = 0; i < arr.length; i ++)
+      product *= arr[i];
   return product;
 };
 
@@ -225,9 +225,7 @@ var multiplyAll = function(arr) {
  * @param {Object}
  * @return {Array}
  */
-var getKeys = function(obj) {
-  return Object.keys(obj);
-};
+var getKeys;
 
 /* #sumAllPositive
  *
@@ -236,7 +234,15 @@ var getKeys = function(obj) {
  * @param {String}
  * @return {Number}
  */
-var sumAllPositive;
+var sumAllPositive = function(nums) {
+  var result = 0;
+  for(var i = 0; i < nums.length; i++) {
+    if (nums[i] > 0) {
+      result += nums[i]
+    }
+  }
+return result;
+};
 
 /* #stringCountBelowThree
  *
@@ -245,7 +251,12 @@ var sumAllPositive;
  * @param {Array}
  * @return {Number}
  */
-var stringCountBelowThree;
+var stringCountBelowThree = function(arr) {
+  arr = arr.filter(function(str) {
+    return str.length <= 3;
+  });
+  return arr.length
+};
 
 /* #countObjects
  *
@@ -254,7 +265,13 @@ var stringCountBelowThree;
  * @param {Array}
  * @return {Number}
  */
-var countObjects;
+var countObjects = function(arr) {
+  var sum = 0;
+  for (var i = 0; i < arr.length; i++) 
+    if (arr[i] != null && typeof arr[i] == 'object')
+      sum ++;
+    return sum;
+};
 
 /* #getObjectKeys
  *
@@ -263,7 +280,9 @@ var countObjects;
  * @param {Object}
  * @return {Array}
  */
-var getObjectKeys;
+var getObjectKeys = function(obj) {
+  return Object.keys(obj);
+};
 
 /* #getObjectValues
  *
@@ -319,7 +338,15 @@ var tupleToObjectReverse;
  * @param {Array}
  * @return {Object}
  */
-var strToKeys;
+var strToKeys = function(str) {
+  var result = {} 
+    var splitted = str.split('');
+    for (var i = 0; i < splitted.length; i ++) {
+      result[splitted[i]] = true;
+    }
+  return result;
+};
+
 
 /* #getValues
  *
@@ -466,17 +493,17 @@ module.exports = {
   sumBelowTen: sumBelowTen,
   moreThanTenLetters: moreThanTenLetters,
   multiplyAll: multiplyAll,
-  getKeys: getKeys,
-  sumAllPositive: null,
-  stringCountBelowThree: null,
-  countObjects: null,
-  getObjectKeys: null,
+  getKeys: null,
+  sumAllPositive: sumAllPositive,
+  stringCountBelowThree: stringCountBelowThree,
+  countObjects: countObjects,
+  getObjectKeys: getObjectKeys,
   getObjectValues: null,
   makeObject: null,
   makeObjectReverse: null,
   tupleToObject: null,
   tupleToObjectReverse: null,
-  strToKeys: null,
+  strToKeys: strToKeys,
   getValues: null,
   getKeys: null,
   objectToArray: null,
