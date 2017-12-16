@@ -360,7 +360,7 @@ var tupleToObjectReverse = function(arr) {
  * @return {Object}
  */
 var strToKeys = function(str) {
-  var result = {} 
+  var result = {};
     var splitted = str.split('');
     for (var i = 0; i < splitted.length; i ++) {
       result[splitted[i]] = true;
@@ -376,7 +376,12 @@ var strToKeys = function(str) {
  * @param {Object}
  * @return {Array}
  */
-var getValues;
+var getValues = function(obj) {
+  var arr = [];
+  for (key in obj) 
+    arr.push(obj[key]);
+  return arr;
+};
 
 /* #getKeys
  *
@@ -395,7 +400,12 @@ var getKeys;
  * @param {Object}
  * @return {Array}
  */
-var objectToArray;
+var objectToArray = function(obj) {
+  var arr = [];
+  for (key in obj)
+    arr.push([key, obj[key]]);
+  return arr;
+};
 
 /* #arrayToObject
  *
@@ -525,9 +535,9 @@ module.exports = {
   tupleToObject: tupleToObject,
   tupleToObjectReverse: tupleToObjectReverse,
   strToKeys: strToKeys,
-  getValues: null,
+  getValues: getValues,
   getKeys: null,
-  objectToArray: null,
+  objectToArray: objectToArray,
   arrayToObject: null,
   arraysToObject: null,
   objectsToTuples: null,
