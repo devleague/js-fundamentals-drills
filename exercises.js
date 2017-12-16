@@ -291,7 +291,12 @@ var getObjectKeys = function(obj) {
  * @param {Object}
  * @return {Array}
  */
-var getObjectValues;
+var getObjectValues = function(obj) {
+  var arr = [];
+  for (key in obj) 
+    arr.push(obj[key]);
+  return arr;
+};
 
 /* #makeObject
  *
@@ -301,7 +306,11 @@ var getObjectValues;
  * @param {String}
  * @return {Object}
  */
-var makeObject;
+var makeObject = function(key, value) {
+  var obj = {};
+  obj[key] = value;
+  return obj;
+};
 
 /* #makeObjectReverse
  *
@@ -498,8 +507,8 @@ module.exports = {
   stringCountBelowThree: stringCountBelowThree,
   countObjects: countObjects,
   getObjectKeys: getObjectKeys,
-  getObjectValues: null,
-  makeObject: null,
+  getObjectValues: getObjectValues,
+  makeObject: makeObject,
   makeObjectReverse: null,
   tupleToObject: null,
   tupleToObjectReverse: null,
