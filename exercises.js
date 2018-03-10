@@ -41,7 +41,9 @@ var sumArrays = function(arr1, arr2) {
  * @param {String}
  * @return {Number}
  */
-var stringCount;
+var stringCount = function(str) {
+  return str.length;
+}
 
 /* #arrayLength
  *
