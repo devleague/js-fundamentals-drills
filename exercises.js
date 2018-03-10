@@ -313,7 +313,11 @@ var getObjectValues = function (obj) {
  * @param {String}
  * @return {Object}
  */
-var makeObject;
+var makeObject = function (key, value) {
+  var result = {};
+  result[key] = value;
+  return result;
+};
 
 /* #makeObjectReverse
  *
