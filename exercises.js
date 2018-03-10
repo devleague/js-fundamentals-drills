@@ -505,7 +505,17 @@ var mapArrayValues = function (arr) {
  * @param {Array}
  * @return {Object}
  */
-var mapStringCounts;
+var mapStringCounts = function (arr) {
+  var result = {};
+  arr.forEach(function (elem) {
+    if (elem.length >= 5) {
+      result[elem] = true;
+    } else {
+      result[elem] = false;
+    }
+  });
+  return result;
+};
 
 /* #arrayToObjectNums
  *
