@@ -199,7 +199,15 @@ var sumBelowTen = function(arr) {
  * @param {String}
  * @return {Number}
  */
-var moreThanTenLetters;
+var moreThanTenLetters = function(arr) {
+  var count = 0;
+  arr.forEach(function(elem) {
+    if (elem.match(/[a-z]/ig).length > 10) {
+      count++
+    }
+  });
+  return count;
+};
 
 /* #multiplyAll
  *
