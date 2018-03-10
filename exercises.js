@@ -596,7 +596,13 @@ var frequencyMap = function (arr) {
  * @param {String}
  * @return {Bool}
  */
-var tupleConvertToObject;
+var tupleConvertToObject = function (arr) {
+  var result = {};
+  arr.forEach(function (elem) {
+    result[elem[0]] = elem[1];
+  });
+  return result;
+};
 
 
 module.exports = {
