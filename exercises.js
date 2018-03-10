@@ -231,7 +231,15 @@ var multiplyAll = function(arr) {
  * @param {String}
  * @return {Number}
  */
-var sumAllPositive;
+var sumAllPositive = function(arr) {
+  var result = 0;
+  arr.forEach(function(elem){
+    if (elem > 0) {
+      result += elem;
+    }
+  });
+  return result;
+};
 
 /* #stringCountBelowThree
  *
