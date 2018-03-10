@@ -282,7 +282,13 @@ var countObjects = function (arr) {
  * @param {Object}
  * @return {Array}
  */
-var getObjectKeys;
+var getObjectKeys = function (obj) {
+  var result = [];
+  for (const key in obj) {
+    result.push(key);
+  }
+  return result;
+};
 
 /* #getObjectValues
  *
