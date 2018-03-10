@@ -63,7 +63,13 @@ var arrayLength = function(arr) {
  * @param {Array}
  * @return {Number}
  */
-var countAll;
+var countAll = function(arr) {
+  var sum = 0
+  arr.forEach(element => {
+    sum += element;
+  });
+  return sum;
+}
 
 /* #countStrings
  *
