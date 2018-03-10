@@ -265,7 +265,15 @@ var stringCountBelowThree = function(arr) {
  * @param {Array}
  * @return {Number}
  */
-var countObjects;
+var countObjects = function (arr) {
+  var count = 0;
+  arr.forEach(function (elem) {
+    if ((typeof elem) === 'object') {
+      count++;
+    }
+  })
+  return count;
+};
 
 /* #getObjectKeys
  *
