@@ -464,7 +464,22 @@ var arraysToObject = function (arr1, arr2) {
  * @param {Object}
  * @return {Array}
  */
-var objectsToTuples;
+var objectsToTuples = function (obj1, obj2) {
+  var result = [];
+  for (const key in obj1) {
+    var tuple = [];
+    tuple[0] = key;
+    tuple[1] = obj1[key];
+    result.push(tuple);
+  }
+  for (const key in obj2) {
+    var tuple = [];
+    tuple[0] = key;
+    tuple[1] = obj2[key];
+    result.push(tuple);
+  }
+  return result;
+};
 
 /* #mapArrayValues
  *
