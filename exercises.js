@@ -171,7 +171,9 @@ var splitString = function(str) {
  * @param {String}
  * @return {Number}
  */
-var lengthOfLast;
+var lengthOfLast = function(arr) {
+  return arr[arr.length - 1].length;
+};
 
 /* #sumBelowTen
  *
