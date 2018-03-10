@@ -160,7 +160,9 @@ var poppedArray = function(arr) {
  * @param {String}
  * @return {Array}
  */
-var splitString;
+var splitString = function(str) {
+  return str.split('');
+};
 
 /* #lengthOfLast
  *
