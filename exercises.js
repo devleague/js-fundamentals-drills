@@ -297,7 +297,13 @@ var getObjectKeys = function (obj) {
  * @param {Object}
  * @return {Array}
  */
-var getObjectValues;
+var getObjectValues = function (obj) {
+  var result = [];
+  for (const key in obj) {
+    result.push(obj[key]);
+  }
+  return result;
+};
 
 /* #makeObject
  *
