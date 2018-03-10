@@ -431,7 +431,13 @@ var objectToArray = function (obj) {
  * @param {Array}
  * @return {Object}
  */
-var arrayToObject;
+var arrayToObject = function (arr) {
+  var result = {};
+  arr.forEach(function (elem) {
+    result[elem] = false;
+  });
+  return result;
+};
 
 /* #arraysToObject
  *
