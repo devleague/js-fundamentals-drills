@@ -137,7 +137,9 @@ var objectSize = function(obj) {
  * @param {Number}
  * @return {Zero}
  */
-var createZeroFilledArray;
+var createZeroFilledArray = function(num) {
+  return Array(num).fill(0);
+};
 
 /* #poppedArray
  *
