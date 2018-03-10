@@ -340,7 +340,11 @@ var makeObjectReverse = function (value, key) {
  * @param {Array}
  * @return {Object}
  */
-var tupleToObject;
+var tupleToObject = function (arr) {
+  var result = {};
+  result[arr[0]] = arr[1];
+  return result;
+};
 
 /* #tupleToObjectReverse
  *
