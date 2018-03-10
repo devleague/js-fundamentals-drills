@@ -248,7 +248,15 @@ var sumAllPositive = function(arr) {
  * @param {Array}
  * @return {Number}
  */
-var stringCountBelowThree;
+var stringCountBelowThree = function(arr) {
+  var count = 0;
+  arr.forEach(function (elem) {
+    if (elem.length <= 3) {
+      count++;
+    }
+  })
+  return count;
+};
 
 /* #countObjects
  *
