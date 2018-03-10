@@ -412,7 +412,16 @@ var getKeys = function (obj) {
  * @param {Object}
  * @return {Array}
  */
-var objectToArray;
+var objectToArray = function (obj) {
+  var result = [];
+  for (const key in obj) {
+    var tuple = [];
+    tuple[0] = key;
+    tuple[1] = obj[key];
+    result.push(tuple);
+  }
+  return result;
+};
 
 /* #arrayToObject
  *
