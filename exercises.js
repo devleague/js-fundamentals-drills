@@ -78,7 +78,12 @@ var countAll = function(arr) {
  * @param {Array}
  * @return {Array}
  */
-var countStrings;
+var countStrings = function(arr) {
+  var result = arr.map(function(index){
+    return index.length;
+  });
+  return result;
+}
 
 /* #countAllStrings
  *
