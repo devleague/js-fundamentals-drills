@@ -525,7 +525,13 @@ var mapStringCounts = function (arr) {
  * @param {Array}
  * @return {Object}
  */
-var arrayToObjectNums;
+var arrayToObjectNums = function (arr) {
+  var result = {};
+  arr.forEach(function (elem) {
+    result[elem] = true;
+  });
+  return result;
+};
 
 /* #stringToKeys
  *
