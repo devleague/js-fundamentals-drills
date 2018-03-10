@@ -488,7 +488,13 @@ var objectsToTuples = function (obj1, obj2) {
  * @param {Array}
  * @return {Object}
  */
-var mapArrayValues;
+var mapArrayValues = function (arr) {
+  var result = {};
+  arr.forEach(function (elem) {
+    result[elem] = true;
+  });
+  return result;
+};
 
 /* #mapStringCounts
  *
