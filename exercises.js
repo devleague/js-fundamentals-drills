@@ -396,7 +396,13 @@ var getValues = function (obj) {
  * @param {Object}
  * @return {Array}
  */
-var getKeys;
+var getKeys = function (obj) {
+  var result = [];
+  for (const key in obj) {
+    result.push(key);
+  }
+  return result;
+};
 
 /* #objectToArray
  *
