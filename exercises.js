@@ -216,7 +216,13 @@ var moreThanTenLetters = function(arr) {
  * @param {Array}
  * @return {Number}
  */
-var multiplyAll;
+var multiplyAll = function(arr) {
+  var result = 1;
+  arr.forEach(function(elem){
+    result *= elem;
+  });
+  return result;
+};
 
 /* #sumAllPositive
  *
