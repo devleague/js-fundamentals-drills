@@ -540,7 +540,14 @@ var arrayToObjectNums = function (arr) {
  * @param {String}
  * @return {Object}
  */
-var stringToKeys;
+var stringToKeys = function (str) {
+  var result = {};
+  var temp = str.split('');
+  temp.forEach(function(elem) {
+    result[elem] = true;
+  });
+  return result;
+};
 
 /* #charCountMap
  *
