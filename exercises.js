@@ -348,7 +348,7 @@ var charCountMap;
  * takes in an array of strings and returns an object with the string as the key and the number of occurences as the value.
  *
  * @param {String}
- * @return {Bool}
+ * @return {Object}
  */
 var frequencyMap;
 
@@ -358,14 +358,14 @@ var frequencyMap;
  * the first element of the tuples and values are second element of the tuples.
  *
  * @param {String}
- * @return {Bool}
+ * @return {Object}
  */
 var tupleConvertToObject;
 
 
 module.exports = {
   doubleArray: null,
-  sumArrays: null, 
+  sumArrays: null,
   stringCount: null,
   arrayLength: null,
   countAll: null,
